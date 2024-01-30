@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>The quick brown fox</h1>
+    <h1>I love you because (of):</h1>
     <UButton variant="outline">
       Generate a Reason!
     </UButton>
