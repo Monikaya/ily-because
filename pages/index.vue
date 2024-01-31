@@ -14,5 +14,5 @@
 
 <script setup>
   import '~/assets/css/textEffect.css';
-  const thing = await getRandomReason();
+  const thing = await useFetch('/api/getRandomReason');
 </script>
