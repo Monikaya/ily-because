@@ -6,7 +6,7 @@
     </UButton>
     <code>
       <div>
-        <p class="typing-effect">{{ reason }}</p>
+        <p class="typing-effect">{{ sillyReason() }}</p>
       </div>
     </code>
   </div>
@@ -14,5 +14,11 @@
 
 <script setup>
   import '~/assets/css/textEffect.css';
-  const reason = await getRandomReason()
+</script>
+
+<script>
+  function sillyReason() {
+    const { reason } = useAsyncState(useFetch('/api/getReason'));
+    return reason;
+  }
 </script>
