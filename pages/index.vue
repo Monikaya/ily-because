@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>I love you because (of):</h1>
+    <h1>fortnite:</h1>
     <UButton variant="outline">
       Generate a Reason!
     </UButton>
     <code>
       <div>
-        <p class="typing-effect">{{ sillyReason() }}</p>
+        <p class="typing-effect">{{ reason }}</p>
       </div>
     </code>
   </div>
@@ -14,11 +14,12 @@
 
 <script setup>
   import '~/assets/css/textEffect.css';
+  let reason = await sillyReason();
 </script>
 
 <script>
-  function sillyReason() {
-    const { reason } = useAsyncState(useFetch('/api/getReason'));
+  async function sillyReason() {
+    let reason = await $fetch('/api/read');
     return reason;
   }
 </script>
