@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>fortnite:</h1>
+    <h1>I love you because:</h1>
     <UButton variant="outline">
       Generate a Reason!
     </UButton>
