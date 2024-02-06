@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>I love you because (of):</h1>
+    <h1>I love you because:</h1>
     <UButton variant="outline">
       Generate a Reason!
     </UButton>
     <code>
       <div>
-        <p class="typing-effect">{{ thing }}</p>
+        <p class="typing-effect">{{ reason }}</p>
       </div>
     </code>
   </div>
@@ -14,5 +14,12 @@
 
 <script setup>
   import '~/assets/css/textEffect.css';
-  const thing = await getRandomReason();
+  let reason = await sillyReason();
+</script>
+
+<script>
+  async function sillyReason() {
+    let reason = await useFetch('/api/read');
+    return reason.data;
+  }
 </script>
