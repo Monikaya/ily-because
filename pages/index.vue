@@ -19,7 +19,7 @@
 
 <script>
   async function sillyReason() {
-    let reason = await $fetch('/api/read');
-    return reason;
+    let reason = await useFetch('/api/read');
+    return reason.data;
   }
 </script>
