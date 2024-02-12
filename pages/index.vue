@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1>I love you because:</h1>
-    <UButton variant="outline">
-      Generate a Reason!
-    </UButton>
+    <div @click="sillyReason()">
+      <UButton variant="outline">
+        Generate a Reason!
+      </UButton>
+    </div>
     <code>
       <div>
         <p class="typing-effect">{{ reason }}</p>
