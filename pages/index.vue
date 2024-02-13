@@ -6,16 +6,13 @@
         Generate a Reason!
       </UButton>
     </div>
-    <code>
-      <div>
-        <p ref="typingTarget"></p>
-      </div>
-    </code>
+    <div class="reasonBox">
+      <p ref="typingTarget"></p>
+    </div>
   </div>
 </template>
 
 <script setup>
-  //import '~/assets/css/textEffect.css';
   import { ref } from 'vue';
   import { useTypingEffect } from '~/composables/useTypingEffect';
 
