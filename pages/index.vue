@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-  import '~/assets/css/textEffect.css';
+  //import '~/assets/css/textEffect.css';
   import { ref } from 'vue';
   import { useTypingEffect } from '~/composables/useTypingEffect';
 

@@ -6,6 +6,15 @@ body {
     margin-top: 5vh;
 }
 
-p {
-    font-size: 3vh;
-}
+code {
+    background-color: #4a6741;
+    border-radius: 4px;
+    padding: 20px;
+    height: 70px;
+    color: white;
+    font-size: 16px;
+    margin: 10px auto;
+    width: 350px;
+    top: 30%;
+    left: 50%;
+  }
