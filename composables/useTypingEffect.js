@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-export const useTypingEffect = (targetElement, typeSpeed = 100) => {
+export const useTypingEffect = (targetElement, typeSpeed = 50) => {
   const displayString = ref('');
   let index = 0;
 
