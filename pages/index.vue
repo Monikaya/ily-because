@@ -33,7 +33,7 @@
       startEffect(newString.value);
     }
     async function sillyReason() {
-      let reason = await useFetch('/api/read');
+      let reason = await useFetch('/api/get-random-reason');
       return reason.data;
     }
 </script>
