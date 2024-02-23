@@ -12,7 +12,6 @@
 
 <script setup>
 let reasonList = await getReasonList();
-console.log(reasonList);
 
 onMounted(() => {
   const listContainer = document.getElementById('listContainer');
@@ -30,3 +29,20 @@ async function getReasonList() {
 }
 
 </script>
+
+<style>
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    text-align: left;
+    margin-left: 25%;
+    margin-right: 10vh;
+    margin-bottom: 1vh;
+    font-size: 16px;
+  }
+  .reasonBox {
+    width: 80%;
+    height: 1000px;
+  }
+</style>
