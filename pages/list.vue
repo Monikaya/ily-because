@@ -8,6 +8,7 @@
       <!--Lol reasons insert here-->
     </ol>
   </div>
+  <PageFooter/>
 </template>
 
 <script setup>
@@ -31,18 +32,20 @@ async function getReasonList() {
 </script>
 
 <style>
-  #listContainer ol {
-    list-style-type: decimal;
-  }
-  #listContainer li {
-    text-align: left;
-    margin-left: 25%;
-    margin-right: 10vh;
-    margin-bottom: 1vh;
-    font-size: 16px;
-  }
-  #listContainer .reasonBox {
-    width: 80%;
-    height: 1000px;
-  }
+#listContainer ol {
+  list-style-type: decimal;
+}
+
+#listContainer li {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 10vh;
+  margin-bottom: 1vh;
+  font-size: 16px;
+}
+
+#listContainer .reasonBox {
+  width: 80%;
+  height: 1000px;
+}
 </style>

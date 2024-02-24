@@ -9,31 +9,33 @@
     <div class="reasonBox">
       <p ref="typingTarget"></p>
     </div>
+    <PageFooter/>
   </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue';
-  import { useTypingEffect } from '~/composables/useTypingEffect';
+import {ref} from 'vue';
+import {useTypingEffect} from '~/composables/useTypingEffect';
 
+let reason = await sillyReason();
+const typingTarget = ref(null);
+const newString = ref(reason.value); // Initialize here 
+const {displayString, startEffect} = useTypingEffect(typingTarget);
+
+onMounted(() => {
+  startEffect(newString.value);
+});
+
+async function typeNewReason() {
+  console.log("henlo");
   let reason = await sillyReason();
-  const typingTarget = ref(null); 
-  const newString = ref(reason.value); // Initialize here 
-  const { displayString, startEffect } = useTypingEffect(typingTarget);
-  
-  onMounted(() => {
-    startEffect(newString.value);
-  });
+  newString.value = reason.value;
 
-  async function typeNewReason() {
-      console.log("henlo");
-      let reason = await sillyReason();
-      newString.value = reason.value;
+  startEffect(newString.value);
+}
 
-      startEffect(newString.value);
-    }
-    async function sillyReason() {
-      let reason = await useFetch('/api/get-random-reason');
-      return reason.data;
-    }
+async function sillyReason() {
+  let reason = await useFetch('/api/get-random-reason');
+  return reason.data;
+}
 </script>

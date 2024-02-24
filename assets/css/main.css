@@ -18,3 +18,8 @@ body {
     top: 30%;
     left: 50%;
   }
+
+.footerButtons {
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
