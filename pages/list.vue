@@ -31,17 +31,17 @@ async function getReasonList() {
 </script>
 
 <style>
-  ol {
+  #listContainer ol {
     list-style-type: decimal;
   }
-  li {
+  #listContainer li {
     text-align: left;
     margin-left: 25%;
     margin-right: 10vh;
     margin-bottom: 1vh;
     font-size: 16px;
   }
-  .reasonBox {
+  #listContainer .reasonBox {
     width: 80%;
     height: 1000px;
   }
