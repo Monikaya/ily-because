@@ -4,7 +4,7 @@
       Home
     </UButton>
     <UButton variant="outline" to="/list" class="footerButtons">
-      List
+      List (spoilers)
     </UButton>
   </div>
 </template>
